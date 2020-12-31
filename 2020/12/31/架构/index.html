@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>first blog | Levi Wang&#39;s homepage</title>
+  <title>架构 | Levi Wang&#39;s homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的知乎和GitHub 爱好1听音乐，打篮球、乒乓球等">
+  <meta name="description" content="大型网站架构演化历程 [TOC] 1From interview book     1、初级阶段​        大型网站都是从小型初级网站演化而来的，这时候应用程序、文件系统、数据库等所有资源都位于一个服务器中。 2、应用与数据分离​        用户访问量和存储的数据量越来越大导致服务器性能越来越差，这时候需要将应用和数据分离。此时整个架构包括三台服务器： 123应用服务器：要处理大量业务逻">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first blog">
-<meta property="og:url" content="http://example.com/2020/12/29/hello-world/index.html">
+<meta property="og:title" content="架构">
+<meta property="og:url" content="http://example.com/2020/12/31/%E6%9E%B6%E6%9E%84/index.html">
 <meta property="og:site_name" content="Levi Wang&#39;s homepage">
-<meta property="og:description" content="我的知乎和GitHub 爱好1听音乐，打篮球、乒乓球等">
+<meta property="og:description" content="大型网站架构演化历程 [TOC] 1From interview book     1、初级阶段​        大型网站都是从小型初级网站演化而来的，这时候应用程序、文件系统、数据库等所有资源都位于一个服务器中。 2、应用与数据分离​        用户访问量和存储的数据量越来越大导致服务器性能越来越差，这时候需要将应用和数据分离。此时整个架构包括三台服务器： 123应用服务器：要处理大量业务逻">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-12-29T11:56:31.296Z">
-<meta property="article:modified_time" content="2020-12-31T11:43:27.318Z">
+<meta property="article:published_time" content="2020-12-31T11:38:02.000Z">
+<meta property="article:modified_time" content="2020-12-31T11:39:04.581Z">
 <meta property="article:author" content="Levi Wang">
-<meta property="article:tag" content="介绍">
+<meta property="article:tag" content="架构">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Levi Wang&#39;s homepage" type="application/atom+xml">
@@ -214,14 +214,14 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-架构" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      first blog
+      架构
     </h1>
   
 
@@ -239,17 +239,40 @@
 		<!--显示阅读次数完毕-->
 
         
-        <a href="/2020/12/29/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-29T11:56:31.296Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-29</time>
+        <a href="/2020/12/31/%E6%9E%B6%E6%9E%84/" class="archive-article-date">
+  	<time datetime="2020-12-31T11:38:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我的<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/Levi.Wang">知乎</a>和<a target="_blank" rel="noopener" href="https://github.com/wangliewei">GitHub</a></p>
-<h3 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a>爱好</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">听音乐，打篮球、乒乓球等</span><br></pre></td></tr></table></figure>
+        <h1 id="大型网站架构演化历程"><a href="#大型网站架构演化历程" class="headerlink" title="大型网站架构演化历程"></a>大型网站架构演化历程</h1><hr>
+<p>[TOC]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">From interview book</span><br></pre></td></tr></table></figure>
 
+
+
+
+<h3 id="1、初级阶段"><a href="#1、初级阶段" class="headerlink" title="1、初级阶段"></a>1、初级阶段</h3><p>​        大型网站都是从小型初级网站<strong>演化</strong>而来的，这时候<strong>应用程序</strong>、<strong>文件系统</strong>、<strong>数据库</strong>等所有资源都位于一个服务器中。</p>
+<h3 id="2、应用与数据分离"><a href="#2、应用与数据分离" class="headerlink" title="2、应用与数据分离"></a>2、应用与数据分离</h3><p>​        用户访问量和存储的数据量越来越大导致服务器性能越来越差，这时候需要将应用和数据分离。此时整个架构包括三台服务器：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">应用服务器：要处理大量业务逻辑，需要更强大的CPU</span><br><span class="line">数据库服务器：要快速磁盘检索和数据缓存，需要更快的磁盘和更大的内存</span><br><span class="line">文件服务器：要存储大量文件，需要更大的磁盘</span><br></pre></td></tr></table></figure>
+<h3 id="3、使用缓存"><a href="#3、使用缓存" class="headerlink" title="3、使用缓存"></a>3、使用缓存</h3><p>​        根据局部性原理（包括时间局部性和空间局部性），可以使用缓存来提高整个网站的数据访问速度。</p>
+<p>​        网站使用的缓存包括应用服务器上的本地缓存和专门的分布式缓存服务器上的远程缓存。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本地缓存虽然速度快但是受应用服务器内存限制；</span><br><span class="line">远程缓存可以使用集群的方式，部署大内存的服务器用作专门的缓存服务器。</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4、使用应用服务器集群提高concurrent-ability"><a href="#4、使用应用服务器集群提高concurrent-ability" class="headerlink" title="4、使用应用服务器集群提高concurrent ability"></a>4、使用应用服务器集群提高concurrent ability</h3><p>​        通过增加服务器改善负载压力，通过负载均衡调度服务器，可以将来自用户的访问请求分发到应用服务器集群中的任何一台上。</p>
+<h3 id="5、数据库读写分离"><a href="#5、数据库读写分离" class="headerlink" title="5、数据库读写分离"></a>5、数据库读写分离</h3><p>​        虽然有缓存，但是当出现大量缓存穿透时，数据库仍然面临这巨大的压力，目前大部分的主流数据库都提供主从热备功能。利用这一功能，网站可以实现数据库读写分离，从而改善数据库负载压力。</p>
+<p>​        应用服务器在写数据的时候，访问主数据库，主数据库通过主从复制机制将数据更新同步到从数据库，这样当应用服务器读数据的时候，就可以通过从数据库获得数据。为了便于应用程序访问读写分离后的数据库，通常在应用服务器端使用<font color='red'>专门的数据访问模块</font>，使数据库读写分离对应用透明。</p>
+<h3 id="6、使用反向代理和CDN加速网站响应"><a href="#6、使用反向代理和CDN加速网站响应" class="headerlink" title="6、使用反向代理和CDN加速网站响应"></a>6、使用反向代理和CDN加速网站响应</h3><p>​        其加速访问速度的基本原理依然是缓存；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CDN 部署在网络提供商的机房，使用户在请求网站服务时，可以从距离自己最近的网络提供商机房获取数据；</span><br><span class="line">反向代理则部署在网站的中心机房，当用户请求到达中心机房后，首先访问的服务器是反向代理服务器，如果反向代理服务器中缓存着用户请求的资源，就将其直接返回给用户；</span><br></pre></td></tr></table></figure>
+<p>​        反向代理和CDN的目的都是今早返回数据给用户，一方面加速用户访问速度，另一方面也<font color='cornflowerblue'>减轻后端服务器的负载压力</font>。</p>
+<h3 id="7、使用分布式数据库和分布式文件系统"><a href="#7、使用分布式数据库和分布式文件系统" class="headerlink" title="7、使用分布式数据库和分布式文件系统"></a>7、使用分布式数据库和分布式文件系统</h3><p>​        分布式数据库是网站数据库拆分的最后手段，只有在单表数据规模非常庞大的时候才使用。不到不得已时，网站更常用的数据库拆分手段是业务分库，将不同业务的数据部署在不同的物理服务器上。</p>
+<h3 id="8、使用NoSQL和搜索引擎加快检索"><a href="#8、使用NoSQL和搜索引擎加快检索" class="headerlink" title="8、使用NoSQL和搜索引擎加快检索"></a>8、使用NoSQL和搜索引擎加快检索</h3><p>​        随着网站业务越来越复杂，对数据存储和检索的需求也越来越复杂，网站需要采用一些非关系数据库技术如NoSQL 和<font color='orange'>非数据库查询技术</font>如搜索引擎</p>
+<h3 id="9、业务拆分"><a href="#9、业务拆分" class="headerlink" title="9、业务拆分"></a>9、业务拆分</h3><p>​        大型网站为了应对日益复杂的业务场景，通过使用分而治之的手段将整个网站业务分成不同的产品线。如大型购物交易网站都会将首页、商铺、订单、买家、卖家等拆分成不同的产品线，分归不同的业务团队负责。具体到技术上，也会根据产品线划分，将一个网站拆分成许多不同的应用，每个应用独立部署。应用之间可以通过一个超链接建立关系（在首页上的导航链接每个都指向不同的应用地址），也可以通过消息队列进行数据分发，当然最多的还是通过访问同一个数据存储系统来构成一个关联的完整系统。</p>
+<h3 id="10、分布式为服务"><a href="#10、分布式为服务" class="headerlink" title="10、分布式为服务"></a>10、分布式为服务</h3><p>​        随着业务拆分越来越小，存储系统越来越庞大，应用系统的整体复杂度呈指数级增加，部署维护越来越困难。由于所有应用要和所有数据库系统连接，在数万台服务器规模的网站中，这些连接的数目是服务器规模的平方，导致数据库连接资源不足，拒绝服务。</p>
+<p>​        既然每一个应用系统都需要执行许多相同的业务操作，比如用户管理、商品管理等，那么可以将这些共用的业务提取出来，独立部署。由这些可复用的业务连接数据库，提供共用业务服务，而应用系统只需要管理用户界面，通过分布式服务调用共用业务服务完成具体业务操作。</p>
 
       
 
@@ -284,7 +307,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">介绍</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
         		</li>
       		
 		</ul>
@@ -340,7 +363,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/29/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/31/%E6%9E%B6%E6%9E%84/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,15 +377,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/12/29/my-first-blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          只为遇见你
-        
-      </div>
-    </a>
   
+    <a href="/2020/12/29/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">只为遇见你</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

@@ -109,8 +109,11 @@
 
 
 
+<div style="position:fixed; bottom:0px ">
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 			height=86 src="//music.163.com/outchain/player?type=2&id=31514407&auto=1&height=66">	</iframe>
+</div>	
 		
-		
+	
 		
 		
 	
@@ -288,16 +291,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="hexo-yilia-一些配置操作"><a href="#hexo-yilia-一些配置操作" class="headerlink" title="hexo+yilia 一些配置操作"></a>hexo+yilia 一些配置操作</h2><hr>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><hr>
 <p>[TOC]</p>
 <h3 id="1、添加背景音乐"><a href="#1、添加背景音乐" class="headerlink" title="1、添加背景音乐"></a>1、添加背景音乐</h3><p>​        在\themes\yilia\layout_partial下的left-col.ejs文件的插入以下代码，其中div代码块里插入你选择的音乐的外链即可，我这里是直接把这个音乐块放到底部了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;position:fixed; bottom:0px &quot;&gt;</span><br><span class="line">	&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;330 			height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;31514407&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;	&lt;&#x2F;iframe&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="2、截断文章"><a href="#2、截断文章" class="headerlink" title="2、截断文章"></a>2、截断文章</h3><p>​        在编辑Markdown文件的时候，把你想要的显示在主页的部分下面加上
-        
-          <a class="article-more-a" href="/2021/01/01/hexo-yilia-%E9%85%8D%E7%BD%AE/#more">more >></a>
-        
+<h3 id="2、截断文章"><a href="#2、截断文章" class="headerlink" title="2、截断文章"></a>2、截断文章</h3><p>​        在编辑Markdown文件的时候，把你想要的显示在主页的部分下面加上&lt;!–more–&gt;即可，除此之外的部分都只能在展开全文后看到。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">上面的&lt;!--more--&gt;前面我用到了反斜杠来转义，不然是显示不出来的。</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3、在页脚添加总访问量"><a href="#3、在页脚添加总访问量" class="headerlink" title="3、在页脚添加总访问量"></a>3、在页脚添加总访问量</h3><p>​        在themes/yilia/layout/_partial下的footer.ejs中添加下面这个脚本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src&#x3D;&quot;&#x2F;&#x2F;busuanzi.ibruce.info&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">       &lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot;&gt;本站总访问量&lt;span       							id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;次&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4、"><a href="#4、" class="headerlink" title="4、"></a>4、</h3>
       
 
       

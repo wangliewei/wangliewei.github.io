@@ -6,17 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020/12 | Levi Wang&#39;s blog</title>
+  <title>论文阅读 Sequential Recommender Systems Challenges  Progress and Prospects | Levi Wang&#39;s blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Levi Wang&#39;s blog">
-<meta property="og:url" content="http://example.com/archives/2020/12/index.html">
+  <meta name="description" content="摘要序列推荐系统（SRSs）日趋流行，区别于传统RSs（协同过滤和基于内容的过滤），SRSs尝试理解和建模以下三种：序列性的用户行为，用户和商品之间的交互、用户偏好和商品流行度随时间的演变。SRSs希冀以此精确表征推荐场景信息、用户信息（意图和目的）、商品变化趋势，从而达到更accurate, customized and dynamic的推荐。本篇综述将介绍SRSs的特点、挑战、最新进展和代表性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文阅读 Sequential Recommender Systems Challenges  Progress and Prospects">
+<meta property="og:url" content="http://example.com/2021/03/13/%E5%BA%8F%E5%88%97%E6%8E%A8%E8%8D%90%E7%BB%BC%E8%BF%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Levi Wang&#39;s blog">
+<meta property="og:description" content="摘要序列推荐系统（SRSs）日趋流行，区别于传统RSs（协同过滤和基于内容的过滤），SRSs尝试理解和建模以下三种：序列性的用户行为，用户和商品之间的交互、用户偏好和商品流行度随时间的演变。SRSs希冀以此精确表征推荐场景信息、用户信息（意图和目的）、商品变化趋势，从而达到更accurate, customized and dynamic的推荐。本篇综述将介绍SRSs的特点、挑战、最新进展和代表性">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/wangliewei/AppData/Roaming/Typora/typora-user-images/image-20210312200545685.png">
+<meta property="og:image" content="https://gitee.com/wangliewie/img/raw/master/img/20210312214937.png">
+<meta property="article:published_time" content="2021-03-13T02:24:14.000Z">
+<meta property="article:modified_time" content="2021-03-13T02:32:20.101Z">
 <meta property="article:author" content="Levi Wang">
+<meta property="article:tag" content="paper">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wangliewei/AppData/Roaming/Typora/typora-user-images/image-20210312200545685.png">
   
     <link rel="alternative" href="/atom.xml" title="Levi Wang&#39;s blog" type="application/atom+xml">
   
@@ -214,108 +222,296 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-序列推荐综述论文阅读笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/12/31/%E6%9E%B6%E6%9E%84/" class="archive-article-date">
-        <time datetime="2020-12-31T11:38:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-31</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/12/31/%E6%9E%B6%E6%9E%84/">架构</a>
-	
+    <h1 class="article-title" itemprop="name">
+      论文阅读 Sequential Recommender Systems Challenges  Progress and Prospects
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2021/03/13/%E5%BA%8F%E5%88%97%E6%8E%A8%E8%8D%90%E7%BB%BC%E8%BF%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2021-03-13T02:24:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-13</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">6.6k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">23分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>序列推荐系统（SRSs）日趋流行，区别于传统RSs（协同过滤和基于内容的过滤），SRSs尝试理解和建模以下三种：序列性的用户行为，用户和商品之间的交互、用户偏好和商品流行度随时间的演变。SRSs希冀以此精确表征推荐场景信息、用户信息（意图和目的）、商品变化趋势，从而达到更accurate, customized and dynamic的推荐。本篇综述将介绍SRSs的特点、挑战、最新进展和代表性发展、有价值的研究方向。</p>
+<a id="more"></a>
+
+<h3 id="1、Introduction"><a href="#1、Introduction" class="headerlink" title="1、Introduction"></a>1、Introduction</h3><p>传统RSs以静态方式建模用户商品交互（the user-item interactions） ，只能捕捉用户一般偏好。SRSs将the user-item interactions视为动态序列，并考虑了顺序依赖性，可捕捉用户当前和最近的偏好从而进行精确推荐。</p>
+<h4 id="SRSs的动机和形式化表述"><a href="#SRSs的动机和形式化表述" class="headerlink" title="SRSs的动机和形式化表述"></a>SRSs的动机和形式化表述</h4><h5 id="Why-Sequential-Recommender-Systems"><a href="#Why-Sequential-Recommender-Systems" class="headerlink" title="Why Sequential Recommender Systems?"></a>Why Sequential Recommender Systems?</h5><p>用户商品交互在本质上是顺序相关的。下面以现实世界的例子说明。Jimmy先后预定机票、旅馆，租车，那么其下一个动作可能是自驾游某旅游胜地（place of interest）。所以，这种顺序依赖关系通常存在于用户行为序列中，但是传统RSs并不能捕获，所以需要SRSs。</p>
+<p>用户的偏好和商品流行度都是动态地随时间而变的，例如年轻人可能现在喜欢iPhone，但是现在年轻人都喜欢华为三星等等。这种动态的变化对于实现<strong>精确的推荐</strong>非常重要，其只能由SRSs捕获。</p>
+<p>SRSs将先前的交互序列作为上下文来预测未来一段时间可能交互的商品，避免重复推荐与已经选择的项目相同或相似的商品，从而实现<strong>推荐多样性</strong>。</p>
+<h5 id="What-are-Sequential-Recommender-Systems"><a href="#What-are-Sequential-Recommender-Systems" class="headerlink" title="What are Sequential Recommender Systems?"></a>What are Sequential Recommender Systems?</h5><p>输入一系列用户商品交互，通过最大化效用值函数（例如，似然函数）生成一个由排名最高的候选项目组成的推荐列表，如下所示:<br>$$<br>R = arg max f(x)<br>$$<br>f是输出候选项排名分数的效用函数，形式多样如条件概率或交互分数等。S = {i<sub>1</sub>,i<sub>2</sub>,……,i<sub>|s|</sub>}是一个用户和商品的交互序列，每个交互i<sub>j</sub> = &lt;u,a,v&gt;都是一个三元组，分别表示用户、用户的行为、商品。这些元数据类型不尽相同。R是按分数排名的商品列表。</p>
+<p>区别于一般的序列建模（通常由原子元素组成），SRSs的任务更具挑战性，因为序列结构复杂，每个元素都是一个三元组。本文将分析SRSs面临的挑战，并总结相应的进展。</p>
+<h5 id="contributions"><a href="#contributions" class="headerlink" title="contributions:"></a>contributions:</h5><ul>
+<li><p>从数据驱动的角度对SRSs中不同数据特征引起的挑战进行分类，为理解SRSs的特征提供的新的视角</p>
+</li>
+<li><p>对SRSs最新论文进行系统分类，总结当前研究进展</p>
+</li>
+<li><p>SRSs的前景</p>
+</li>
+</ul>
+<h3 id="2-Data-Characteristics-and-Challenges"><a href="#2-Data-Characteristics-and-Challenges" class="headerlink" title="2 Data Characteristics and Challenges"></a>2 Data Characteristics and Challenges</h3><p>用户行为、商品特征、交互环境具有多样性和复杂性，因此生成的用户商品交互数据通常具有不同的特征，这是SRSs面临的挑战的本质原因，因此需要不同的解决方案。下面是五个主要的由不同数据特征引起的挑战。</p>
+<p><img src="C:\Users\wangliewei\AppData\Roaming\Typora\typora-user-images\image-20210312200545685.png" alt="image-20210312200545685"></p>
+<h5 id="2-1-处理长用户-项目交互序列"><a href="#2-1-处理长用户-项目交互序列" class="headerlink" title="2.1 处理长用户-项目交互序列"></a>2.1 处理长用户-项目交互序列</h5><p>长序列由大量的user-item interaction组成，因此更可能有更复杂的依赖关系，这使得序列推荐更加艰难。具体来说，长用户-项目交互序列中两个最关键的挑战是 <strong>学习高阶顺序依赖关系</strong> 和 <strong>学习长期顺序依赖关系</strong>，</p>
+<p><strong>学习高阶顺序依赖关系</strong> </p>
+<p>相较而言，低阶序列依赖相当简单，它能轻易地通过马尔科夫模型或因子分解机建模。由于其复杂的多级级联依赖关系跨越多个用户项交互，因此高阶序列依赖关系更加复杂，也更难捕获。目前有两个方法在一定程度上可解决：高阶马尔科夫模型和循环神经网络。但二者皆具有局限性，如包含在高阶马尔科夫模型中的历史状态是相当有限的，因为要被估计的模型参数的数量随着阶数的增长呈现指数型增长，而循环神经网络中的过强的次序假设限制了循环神经网络在序列中应用的灵活性。</p>
+<p><strong>学习长期顺序依赖关系</strong></p>
+<p>长期序列依赖关系指的是在一个序列中相互之间相距很远的交互间的依赖关系。如，给定一个购物序列<em>S1</em> = {玫瑰花，鸡蛋，面包，一瓶牛奶，一个花瓶}，这包含了Janet成功购买的一篮子商品。显而易见，花瓶和玫瑰花是高依赖关系，即使他们之间的相距很远。这种情况在现实中并不少见，因为用户的行为通常是高度不确定的，他们可能会把任何物品放进购物车中。</p>
+<p>为了解决这种关键的问题，基于长短时记忆和基于门循环单元的循环神经网络已经被应用于序列推荐系统中了，这种情况下就能捕获序列中用户-商品的交互间的长期以来关系。局限性：循环神经网络模型通过过度假设（任何邻近商品在序列中都是高依赖关系）生成错误依赖关系是比较容易发生的。在上例中，CNN通常会假设牛奶和花瓶是由依赖关系的，因为它们相邻，事实是它们并不相关。为了解决这个问题，尝试过在一个统一的模型中，通过利用混合模型的优势，结合不同时间范围内的多个子模型去捕获短期和长期的依赖关系[Tang et al.，2019]。总的来说，能够解决这一挑战的工作相当有限，需要进行更多的研究来弥补这一差距。</p>
+<h5 id="2-2-使用灵活的顺序处理用户-项目交互序列"><a href="#2-2-使用灵活的顺序处理用户-项目交互序列" class="headerlink" title="2.2 使用灵活的顺序处理用户-项目交互序列"></a>2.2 使用灵活的顺序处理用户-项目交互序列</h5><p>在现实世界中，一些UI交互序列是严格有序的，而另一些则可能不是，即不是所有相邻的交互都是顺序相关的。例如，在购物序列S2 = {牛奶, 黄油, 面粉}中，先买牛奶还是先买黄油并不重要，但同时购买这两种商品会导致接下来购买面粉的可能性更高;也就是说，牛奶和黄油之间没有严格的顺序，但面粉的顺序取决于它们的结合。因此，对于具有灵活顺序的序列，最好捕获<strong>集体顺序依赖关系</strong>，而不是点向顺序依赖关系，因为前者是模糊的，并且在用户-项交互上没有严格的顺序。因此，<strong>如何在灵活顺序假设下捕获集体顺序依赖关系</strong>，成为SRSs中使用灵活顺序处理序列的关键挑战。</p>
+<p>对于这一常见问题，已有研究并不充足。现有的建立在markov链上的SRSs，因式分解机或RNN只能处理点向依赖，而不擅长建模和捕获集体依赖。[唐和王，2018;Yuan等人(2019)]试图解决这一挑战，利用CNN对“图像”中不同区域之间的局部和全局依赖关系进行建模，即，一个交互序列的嵌入矩阵。基于cnn的SRSs取得的技术进展将在3.3节中介绍。</p>
+<h5 id="2-3-处理带有噪声的用户-项目交互序列"><a href="#2-3-处理带有噪声的用户-项目交互序列" class="headerlink" title="2.3 处理带有噪声的用户-项目交互序列"></a>2.3 处理带有噪声的用户-项目交互序列</h5><p>由于用户行为的不确定性，大部分的用户-物品交互序列是不干净的，这意味着它们可能包含一些噪声和不相关的交互，对下一次交互预测产生干扰。现实中中，在一个用户-项目交互序列中，一些历史交互与下一个交互密切相关，而其他交互可能是弱相关甚至不相关的。例如，在另一个购物序列S3= {培根，玫瑰，鸡蛋，面包}中，物品“玫瑰”可能是一个有噪声的物品，因为它与其他物品有很大的不同，并且与它们没有相关性。下一项可能是一瓶牛奶，概率很高，它只是依次依赖培根、鸡蛋和面包，而与玫瑰无关。因此，SRSs中的另一个关键挑战是，在有噪声的用户-项目交互序列上，仔细而有区别地学习顺序依赖关系。<br>相当多的研究试图通过使用注意力模型(Wang et al.， 2018)或记忆网络(Chen et al.， 2018)来解决这一典型问题，有选择地保留和利用那些与下一次交互预测真正相关的交互信息。这些解决办法所取得的技术进展将在第3.3节中介绍。</p>
+<h5 id="2-4-处理具有异构关系的用户-项目交互序列"><a href="#2-4-处理具有异构关系的用户-项目交互序列" class="headerlink" title="2.4 处理具有异构关系的用户-项目交互序列"></a>2.4 处理具有异构关系的用户-项目交互序列</h5><p>异构关系是指传递不同信息的不同类型的关系，在SRSs中应该以不同的方式建模。如，在一个用户-项目交互序列中，除了普遍存在的基于用户-项目交互的顺序依赖关系之外，在相互作用的项目之间也存在基于相似性的关系。此外，尽管两者都是顺序依赖项，但<strong>长期顺序依赖项</strong>与<strong>短期顺序依赖项</strong>有很大的不同，它们不能以相同的方式建模。因此，SRSs中的另一个关键挑战是 <strong>如何有效地分别捕获用户-项目交互序列中的这些潜在的异构关系</strong>，并在处理与异构关系相关的用户-项目交互序列时使它们协同工作，以获得序列的推荐。</p>
+<p>解决此挑战的研究很少，混合模型[12；15；20)是迄今为止应对这种挑战的唯一解决方案。混合模型集成了不同子模型建模的不同类型的关系，以协作地生成序列推荐。具体技术进展情况见第3.3节。</p>
+<h5 id="2-5-用层次结构处理用户-项交互序列"><a href="#2-5-用层次结构处理用户-项交互序列" class="headerlink" title="2.5 用层次结构处理用户-项交互序列"></a>2.5 用层次结构处理用户-项交互序列</h5><p>通常与user-item interaction sequence相关联的层次结构主要有两种：（1）元数据和user-item interaction之间的层次结构。用户的人物统计特征在一定程度上决定了用户的偏好，并会进一步影响他们与项目的互动。同样地，物品的特征往往会对它们是否会被用户喜欢和互动产生一定的影响[9]；（2）子序列与用户-项目交互之间的层次结构。更具体地说，在某些SRSs中，一个用户-项交互序列包括多个子序列(也称为会话)。在这种情况下，除了当前子序列中的先前交互外，历史子序列还可能影响当前子序列中将要预测的下一次用户-物品交互[25]。因此，如何将嵌入在这两种层次结构中的层次依赖整合到顺序依赖学习中，从而产生更准确的顺序推荐，是SRSs的一个关键挑战。<br> 虽然已有不少作品试图从某些方面来应对这一挑战，但对其他方面的研究较少。一方面，考虑物品特征对用户物品交互的影响，针对SRSs提出了一系列特征丰富的神经模型，包括[9]。相比之下，现有的SRSs很少考虑用户人口统计数据的影响，应该在这方面投入更多的努力。另一方面，已经设计了一些层次模型，包括层次嵌入模型[18]、层次RNN [13]和层次注意力网络[25]，将历史子序列纳入序列依赖学习中，以构建更强大的SRSs。第3.2节和第3.3节将特别介绍为应付这一挑战所取得的技术进展。</p>
+<h3 id="3-Research-Progress"><a href="#3-Research-Progress" class="headerlink" title="3 Research Progress"></a>3 Research Progress</h3><p>为了概述SRSs的技术精湛并提供解决上述挑战的更多技术细节，我们在本节中从技术角度总结并简要讨论了SRSs的研究进展。特别是，我们首先从技术角度对SRS的所有方法进行分类，然后简要介绍每个类别的最新进展。</p>
+<p>SRS方法的分类如图2所示。这些方法先被分为11个原子类（例如，顺序模式挖掘，分解机和递归神经网络）。这些原子类可进一步被分为三类，包括传统的序列模型、潜在表示模型和深度神经网络模型。这三类从简单到复杂，下面总结三类的每一类的研究进展。</p>
+<p><img src="https://gitee.com/wangliewie/img/raw/master/img/20210312214937.png"></p>
+<h5 id="3-1-传统的序列模型"><a href="#3-1-传统的序列模型" class="headerlink" title="3.1 传统的序列模型"></a>3.1 传统的序列模型</h5><p>包括序列模式挖掘和马尔科夫链模型，利用它们在建立序列中用户-物品交互之间的序列依赖性方面的天然优势，是SRSs的直观解决方案。</p>
+<p><strong>序列模式挖掘</strong>。基于序列模式的RSs首先挖掘序列数据上的频繁模式，然后利用挖掘的模式来指导后续的建议。序列模式挖掘虽然简单直接，但通常会产生大量的冗余模式，增加了不必要的时间和空间开销。另一个明显的缺点是，由于频率的限制，经常会丢失那些不常见的模式和项目，将推荐结果限制在那些流行的项目。因此，除了一部具有代表性的作品外，这类的作品较少[24; 16]</p>
+<p><strong>马尔可夫链模型</strong>。基于马尔可夫链的RSs采用马尔可夫链模型对用户-物品在序列上的交互转换进行建模，用于预测下一次交互。根据所使用的具体技术，将基于马尔可夫链的RSs方法分为<strong>基本马尔可夫链方法</strong>和<strong>基于潜在马尔可夫嵌入方法</strong>。前者基于显式观测直接计算跃迁概率[3]，而后者首先将马尔可夫链嵌入到欧几里得空间中，然后根据其欧几里得距离计算相互作用之间的跃迁概率[2]。此模型的缺点是显而易见的，即一方面由于<strong>马尔可夫性假设</strong>当前相互作用只依赖于一个或多个最近的相互作用，因此<u>只能捕捉短期依赖关系而忽略长期依赖关系</u>;另一方面，它们只能捕获点向依赖项，而<u>忽略用户-项交互上的集体依赖项</u>。因此，近年来，他们越来越少被雇佣到SRSs。</p>
+<h5 id="3-2-SRSs的潜在表示模型"><a href="#3-2-SRSs的潜在表示模型" class="headerlink" title="3.2 SRSs的潜在表示模型"></a>3.2 SRSs的潜在表示模型</h5><p>潜在表示模型首先学习每个用户或项目的潜在表示，然后通过利用所学习的表示来预测随后的用户项目交互。结果，在一个<strong>潜在的空间中捕获了更多隐含的和复杂的依赖关系</strong>，这对推荐非常有利。接下来，我们介绍两个属于这个分类法的代表性模型。</p>
+<p><strong>Factorization machines</strong> 基于因子分解机的子空间分解通常利用<u>矩阵分解或张量分解</u>，将观察到的用户-项目交互分解成用户和项目的潜在因素以供推荐[14，2010；10，2016]。<u>与协同过滤不同</u>，要分解的矩阵或张量是由交互而不是协同过滤中的评价组成的。这种模型容易受到观测数据稀疏性的影响，因此不能实现理想的推荐<br><strong>Embedding</strong> 基于嵌入的潜在推荐系统通过将序列中的所有用户-项目交互编码到一个潜在空间中，为每个用户和项目学习一个潜在的表示，用于后续的推荐。具体而言，一些作品将所学习的潜在表示作为网络的输入来进一步计算用户和项目之间的交互分数，或者连续用户的动作[18，2015；19，2018)，而其他的工作直接利用它们来计算像欧几里得距离这样的度量作为交互分数[5，2018]。这种模式因其简单、有效和高效，近年来显示出巨大的潜力。</p>
+<h5 id="3-3-SRSs的深度神经网络模型"><a href="#3-3-SRSs的深度神经网络模型" class="headerlink" title="3.3 SRSs的深度神经网络模型"></a>3.3 SRSs的深度神经网络模型</h5><p>深度神经网络具有建模和捕获不同实体(如用户、项目、交互)之间的综合关系的<u>自然能力</u>，因此在过去的几年里它们几乎占据了SRSs的主导地位。<u>在SRSs中取得的最新进展也属于这个分类</u>。一般来说，这种分类可以分为两类:<strong>基于基本深度神经网络</strong>的SRSs和<strong>基于一些高级模型的深度神经网络</strong>的SRSs。</p>
+<p><strong>基于基本深度神经网络</strong></p>
+<p>基于循环神经网络在序列建模方面的优势，目前最常用的深度神经网络是循环神经网络(RNN)，但也存在一些缺陷。近年来，卷积神经网络(CNN)和图神经网络(GNN)也被应用到SRSs中，弥补了RNN的不足。接下来，我们分别介绍了建立在这三种深度神经网络之上的SRSs。</p>
+<p><strong>RNN-based SRSs</strong>. 给定一个历史用户-物品交互的序列，基于RNN的SRSs试图通过对给定交互的序列依赖性建模来预测下一个可能的交互。除了基本的RNN, long- short-term-memory (LSTM) [Wu et al.， 2017]和基于门控循环单元(GRU) [Hidasi et al.， 2016a]的RNN也被开发用于捕获序列中的长期依赖关系。近年来，基于神经网络的SRSs蓬勃发展，并主导了基于深度学习的SRSs乃至整个SRSs的研究。除了RNN的基本结构之外，还提出了一些变体以序列的形式捕获更复杂的依赖关系，如hierarchical RNN [Quadrana et al.， 2017]。然而,RNN不是完美的,<u>两方面的缺点</u>:(1)由于过于强烈的假设，即任何相邻的交互必须依赖一个序列，很容易产生假依赖,这可能不是真实情况在现实世界中,因为通常是无关紧要的或在嘈杂的交互序列;并且(2)它可能只捕获点向依赖关系，而忽略相互依赖关系(例如，几个交互协作地影响下一个交互)。</p>
+<p>**CNN-based SRSs **与RNN不同的是，给定一个用户-物品的交互序列，CNN首先将这些交互的嵌入放入一个矩阵中，然后将这个矩阵作为时间和潜在空间中的一个“图像”。最后，一个CNN使用卷积过滤器学习序列模式作为图像的局部特征，用于后续推荐。由于CNN对序列中的交互没有强阶假设，而不是在交互中学习“图像”区域之间的模式，因此基于CNN的SRSs可以在一定程度上弥补基于rnn的SRSs的上述不足。然而，基于CNN的SRSs不能有效地捕获长期依赖关系，这是由于CNN所使用的滤波器尺寸的限制，限制了其应用。典型作品有[Tang and Wang, 2018; Yuan et al., 2019].。</p>
+<p>**GNN-based SRSs **最近，随着GNN的快速发展，基于GNN的SRSs被设计成利<u>用GNN建模和捕捉用户-项交互序列上的复杂转换</u>。通常，有向图首先构建在均衡数据库中，将每个交互作为图中的阳极，同时将每个序列映射到一个路径。然后，在图中学习用户或项目的嵌入，在整个图中嵌入更复杂的关系[Wu et al.， 2019]。该方法充分利用了GNN的优势来捕获结构化关系数据集中的复杂关系。基于gnn的SRSs通过揭示推荐项目和相应的顺序上下文之间的复杂关系，显示出提供可解释的建议的巨大潜力。这种SRSs仍处于早期阶段。</p>
+<p><strong>Advanced Models</strong></p>
+<p>为了解决基于基本神经网络结构的SRSs的局限性，一些高级模型通常与某种基本深度神经网络(如RNN、CNN)相结合，以构建更强大的SRSs，能够应对特定的挑战。接下来，我们将介绍SRSs中常用的三种先进模型。</p>
+<p><strong>Attention models</strong> 注意模型通常被用于强调序列中真正相关和重要的交互作用，而忽略那些与下一次交互无关的交互作用。它们被广泛地纳入到shallow networks(浅层神经网络) [Wang et al.， 2018]和RNN [Ying et al.， 2018]中，以处理带有噪声的交互序列</p>
+<p><strong>Memory networks</strong> 记忆网络被引入到SRSs中，通过合并外部内存矩阵来捕获任何历史用户-项目交互与下一个交互之间的依赖关系。这样的矩阵可以更明确、更动态地存储和更新历史交互，提高模型的表现力，减少那些无关交互的干扰[Chen等，2018]。此外，还有一些工作采用键值记忆网络，按顺序存储和更新交互项的相应知识库信息，学习属性级别偏好，以增强推荐[Huang et al.， 2018]。一般来说，记忆网络在SRSs中已显示出其潜力，但还没有得到充分的研究。</p>
+<p><strong>Mixture models</strong> 基于混合模型的SRSs<strong>将擅长捕获不同类型依赖关系的不同模型组合在一起</strong>，以增强整个模型捕获各种依赖关系以获得更好建议的能力。一个典型的例子是[Tang et al.， 2019]，它结合了分别适用于短期依赖和长期依赖的不同类型的编码器，为后续建议学习更精确的序列表示，并被证明是非常有效的。然而，这些模型还处于早期阶段。</p>
+<h3 id="4-开放的研究方向"><a href="#4-开放的研究方向" class="headerlink" title="4 开放的研究方向"></a>4 开放的研究方向</h3><p>近年来，尤其是近三年来，序列推荐系统发展迅速，深度学习尤其是循环神经网络蓬勃发展。在对该领域的研究实践进行分类和总结的同时，我们确定了以下讨论的进一步开放的研究方向。</p>
+<p><strong>上下文感知的序列推荐系统</strong> 某一用户或某一项目所处的当前环境可能会极大地影响用户对该项目的选择，在提出建议时应考虑到这一点。这在SRSs中甚至更为必要，因为上下文可能会随着时间而改变。然而，<u>大多数现有的SRSs忽略了这一重要方面</u>。因此，上下文感知的SRSs将是未来工作的一个重要方向。</p>
+<p><strong>Social-aware sequential recommender system</strong> 用户生活在一个社会中，线上线下都与各种各样的人联系在一起。他人的行为或意见往往会极大地影响用户的选择。因此，SRSs需要考虑社会影响，而这在现有的工作中往往被忽略。</p>
+<p><strong>Interactive sequential recommender systems</strong> （交互）现实世界中的大多数购物行为都是连续的，而不是孤立的。换句话说，用户与购物平台(如Amazon)之间实际上存在顺序交互。然而，现有的SRSs常常忽略这种交互作用，只在单个时间步骤中为一个操作生成建议。<u>如何结合用户-卖家的互动从而产生多时间步长推荐是一个很有前途的研究方向。</u></p>
+<p><strong>Cross-domain sequential recommender systems</strong> （跨域）在现实世界中，用户在某段时间内购买的物品通常来自多个领域，而不是一个领域。从本质上讲，来自不同领域的项目之间存在一些顺序依赖关系，比如在购买汽车之后购买汽车保险。这种跨域顺序依赖关系在大多数SRSs中被忽略。因此，<u>跨域SRS是另一个有前景的研究方向，它可以利用其他领域的信息和来自不同领域的更多样化的推荐来产生更准确的推荐。</u></p>
+<h3 id="5-Conclusions"><a href="#5-Conclusions" class="headerlink" title="5 Conclusions"></a>5 Conclusions</h3><p>推荐系统(RS)是人工智能在我们日常生活中最直接、最实际的应用之一。在过去的三到五年中，序列推荐系统(SRSs)一直是RS领域的核心，因为它提供了更智能和更有利的推荐，满足了我们的日常需求。我们希望这篇总结能为RS研究界提供一个关于SRSs的挑战、近期进展以及未来发展方向的概述。</p>
+<p>vibrant  充满活力的        essentially = in essential 本质上地       successively 连续地，相继地</p>
+<p>in contrast 相反              rather than 而不是     depict 描述          not far away from 距…不远</p>
+<p>treat sth as sth 把…视为…       likewise 同样       conventional传统的         For instance例如</p>
+<p>take sth into account  考虑到…           motivates the development of sth 推动…的发展</p>
+<p>旅游胜地：tourist attraction、place of interest          over time随时间变化地        atomic原子</p>
+<p>used to be 过去通常是…          be of/have great significance for 对…有重大意义            corresponding 相应的</p>
+<p>a sequence of 一系列的         in the near future 在不久的将来       More specifically,更具体地</p>
+<p>candidate items 候选商品        consist of = be composed of 由…组成          In some cases,某些情况下</p>
+<p>categorize 将…分类             the diversity and complexity 多样性与复杂性        data characteristics数据特征</p>
+<p>a relatively large number of 大量的      comprehensive全面的      challenging有挑战性       critical 关键的</p>
+<p>dependence（复数为dependencies）依赖，依靠         to some extent在某种程度上          namely,即</p>
+<p> adjacent 相邻的         Therefore,因此       pay much attention to充分重视         work collaboratively 合作</p>
+<p>be strongly/weakly relevant to sth 与…强(弱)相关            from a technical perspective 从技术的角度</p>
+<p>take advantage of their natural strength 利用他们的天然优势           simple and straightforward简单而直接ad</p>
+<p>redundant冗余的        quite few sth 几乎没有…           Consequently 因此，结果     daily requirements日常需要</p>
+<p> in the past three to five years过去的三到五年中</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Levi Wang
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2021/03/13/序列推荐综述论文阅读笔记/" title="论文阅读 Sequential Recommender Systems Challenges  Progress and Prospects" target="_blank">http://example.com/2021/03/13/序列推荐综述论文阅读笔记/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">paper</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/13/%E5%BA%8F%E5%88%97%E6%8E%A8%E8%8D%90%E7%BB%BC%E8%BF%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/12/29/%E7%BD%AE%E9%A1%B6/" class="archive-article-date">
-        <time datetime="2020-12-29T11:59:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-29</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/12/Typora%20+%20Gitee%20+%20PicGo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Typora + Gitee + PicGo</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/12/29/%E7%BD%AE%E9%A1%B6/">那年那人那阵风</a>
-	
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
 
 
           </div>
@@ -356,8 +552,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,24 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>那年那人那阵风 | Levi Wang&#39;s blog</title>
+  <title>二叉树专题 | Levi Wang&#39;s blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="以吾之眼，观三千世界……    ​">
+  <meta name="description" content="本专题代码和题目 先序遍历：对于任何子树的处理顺序都是 ，先头结点，再左子树，再右子树。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="那年那人那阵风">
-<meta property="og:url" content="http://example.com/2020/12/29/%E7%BD%AE%E9%A1%B6/index.html">
+<meta property="og:title" content="二叉树专题">
+<meta property="og:url" content="http://example.com/2021/03/22/BinaryTree/index.html">
 <meta property="og:site_name" content="Levi Wang&#39;s blog">
-<meta property="og:description" content="以吾之眼，观三千世界……    ​">
+<meta property="og:description" content="本专题代码和题目 先序遍历：对于任何子树的处理顺序都是 ，先头结点，再左子树，再右子树。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/wangliewie/img/raw/master/img/wallhaven-4yj61x.jpg">
-<meta property="article:published_time" content="2020-12-29T11:59:01.000Z">
-<meta property="article:modified_time" content="2021-03-12T13:16:21.296Z">
+<meta property="article:published_time" content="2021-03-22T15:21:58.000Z">
+<meta property="article:modified_time" content="2021-04-05T02:29:09.479Z">
 <meta property="article:author" content="Levi Wang">
-<meta property="article:tag" content="其他">
+<meta property="article:tag" content="算法题">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/wangliewie/img/raw/master/img/wallhaven-4yj61x.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Levi Wang&#39;s blog" type="application/atom+xml">
   
@@ -221,14 +219,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-置顶" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-BinaryTree" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      那年那人那阵风
+      二叉树专题
     </h1>
   
 
@@ -240,8 +238,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/12/29/%E7%BD%AE%E9%A1%B6/" class="archive-article-date">
-        <time datetime="2020-12-29T11:59:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-29</time>
+<a href="/2021/03/22/BinaryTree/" class="archive-article-date">
+        <time datetime="2021-03-22T15:21:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
 </a>
 
   
@@ -254,7 +252,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">9字</span>
+      <span class="post-count">693字</span>
     </span>
   </span>
 
@@ -263,7 +261,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -274,11 +272,30 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="以吾之眼，观三千世界……"><a href="#以吾之眼，观三千世界……" class="headerlink" title="以吾之眼，观三千世界……"></a><font color="#660066">以吾之眼，观三千世界……</font><br /></h1><br>
-
-
-
-<p>​     <img src="https://gitee.com/wangliewie/img/raw/master/img/wallhaven-4yj61x.jpg" width=300 height=256 />          </p>
+    <p>本专题代码和题目</p>
+<p>先序遍历：对于<strong>任何子树</strong>的处理顺序都是 ，先头结点，再左子树，再右子树。<a id="more"></a></p>
+<p>中序：左中右    后序：左右中</p>
+<p>子树是以某个节点为根节点的下面<strong>所有</strong>节点构成的</p>
+<p>递归遍历的本质不是什么先序后序，而是递归序；先中后序都可以在递归序的基础上加工出来</p>
+<p><strong>递归序</strong>：每个节点都会到达三次</p>
+<p>先序就是每次第一次到达的时候就打印（访问），中序是第二次，后序是第三次；</p>
+<p>这说明每个节点都可以去其左子树（或右子树）转一圈收集一些信息，然后回来整合这些信息，这是树形DP的关键</p>
+<p>任何递归函数都可以改成非递归，自己设计压栈来实现</p>
+<p>对于非递归的二叉树遍历，强记住就行了，因为太基础，就像公式一样</p>
+<p>（1）非递归<strong>前序</strong>  先把根节点压到栈里，按照下面三条依次：弹出打印、如有右孩子就压入右、如有左压入左</p>
+<p>（2）非递归<strong>后序</strong> 先把根节点压到栈里，按照下面三条依次：弹出打印（改成入栈再出栈打印）、如有左孩子就压入左、如有右压入右，然后再总体调一次序</p>
+<p>（3）非递归<strong>中序</strong>  a整条左边界依次入栈； b当a无法继续的时候，弹出节点并打印，然后来到弹出节点的右子树上继续a；；整颗树都可以被各子树的左边界划分</p>
+<p>二叉树的序列化和反序列化</p>
+<ol>
+<li>可以用先序或中序或后序或层次遍历，来实现二叉树的序列化，不要忽略空节点</li>
+</ol>
+<p>二叉树的递归套路：可以解决面试中绝大多数的二叉树问题尤其是树型dp问题，本质是利用递归遍历二叉树的便利性</p>
+<p>（1）假设以x节点为头，假设可以向x的左树和x的右树要任何信息</p>
+<p>（2）在上一步的假设下，讨论以x为头节点的树，得到答案的可能性（最重要； 常见的可能性是分为 与X无关 和 与X有关）</p>
+<p>（3）列出所有的可能性后，确定到底需要向左树和右树要什么样的信息</p>
+<p>（4）把左树信息和右树信息求全集，就是任何一颗子树都需要返回的信息S</p>
+<p>（5）递归函数都返回S，每一颗子树都这么要求</p>
+<p>（6）写代码，在代码中考虑如何把左树和右树的信息整合出整棵树的信息</p>
 
     
 
@@ -315,7 +332,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://example.com/2020/12/29/置顶/" title="那年那人那阵风" target="_blank">http://example.com/2020/12/29/置顶/</a>
+          <a href="http://example.com/2021/03/22/BinaryTree/" title="二叉树专题" target="_blank">http://example.com/2021/03/22/BinaryTree/</a>
         </li>
         
         <li>
@@ -331,18 +348,13 @@
   </div>
   <div class="article-info article-info-index">
     
-    <div class="article-pop-out tagcloud">
-      <i class="icon-tuding"></i>
-      <a class="article-tag-list-link color3">置顶</a>
-    </div>
-    
     
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">算法题</a>
         		</li>
       		
 		</ul>
@@ -398,7 +410,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/29/%E7%BD%AE%E9%A1%B6/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/22/BinaryTree/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -413,15 +425,20 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/12/31/%E6%9E%B6%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/05/%E6%B7%B1%E5%BA%A6%E6%8E%A8%E8%8D%90%E6%A8%A1%E5%9E%8B%E4%B9%8BDeep-Crossing%EF%BC%9A-%E7%BB%8F%E5%85%B8%E7%9A%84-Embedding-MLP-%E6%A8%A1%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          架构
+          Deep Crossing
         
       </div>
     </a>
   
+  
+    <a href="/2021/03/13/%E5%BA%8F%E5%88%97%E6%8E%A8%E8%8D%90%E7%BB%BC%E8%BF%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">论文阅读 Sequential Recommender Systems Challenges  Progress and Prospects</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
